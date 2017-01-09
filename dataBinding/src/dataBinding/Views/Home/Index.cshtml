@@ -1,0 +1,30 @@
+﻿
+<html ng-app="DataBindingModule">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body ng-controller="HomeController as c">
+    <div class="text-center">
+        <input class="input-sm" ng-model="c.message" />
+        <button class="btn btn-purple" ng-click="c.displayOutput()"> Submit Message</button>
+    </div>
+    <div class="jumbotron">
+        <div class="text-center">
+            {{c.output}}
+        </div>
+    </div>
+    <div class="text-center">
+        <input class="input-sm" ng-model="c.num1"/>
+        <input class="input-sm" ng-model="c.num2" />
+        <button class="btn btn-primary btn-lg round" ng-click="c.addNums()">+</button>
+        <button class="btn btn-coral " ng-click="c.subNums()">-</button>
+        <button class="btn btn-pink  btn-lg round" ng-click="c.multiNums()">*</button>
+        <button class="btn btn-purple " ng-click="c.divNums()">/</button>
+        <h1>{{c.result}}</h1>
+    </div>
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/ngApp/app.js"></script>
+</body>
+</html>
